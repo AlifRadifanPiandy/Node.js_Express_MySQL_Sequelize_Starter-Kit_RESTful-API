@@ -10,32 +10,6 @@ import {
 //Yup is a JavaScript schema builder for value parsing and validation.
 
 let userController = {
-  add: async (req, res, next) => {
-    try {
-      const schema = Yup.object().shape({
-        name: Yup.string().required(),
-        email: Yup.string().email().required(),
-        password: Yup.string().required().min(6),
-      });
-
-      if (!(await schema.isValid(req.body))) throw new ValidationError();
-
-      const { email } = req.body;
-
-      const userExists = await User.findOne({
-        where: { email },
-      });
-
-      if (userExists) throw new BadRequestError();
-
-      const user = await User.create(req.body);
-
-      return res.status(200).json(user);
-    } catch (error) {
-      next(error);
-    }
-  },
-
   addAddress: async (req, res, next) => {
     try {
       const { body, userId } = req;

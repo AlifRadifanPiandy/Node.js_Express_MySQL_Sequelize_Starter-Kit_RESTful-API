@@ -78,10 +78,19 @@ npx sequelize db:migrate:undo:all
 npx sequelize db:seed:all
 ```
 
+## API Documentation
+
+API documentation is available in Postman format. You can import the Postman JSON file that accompanies this project to get complete documentation about the API endpoints and required requests.
+
+https://documenter.getpostman.com/view/24200467/2sA3XJn5fn
+
 ## Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
 
 ## License
 
-Licensed under the [MIT License](LICENSE).
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
